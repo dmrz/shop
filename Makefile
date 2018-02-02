@@ -1,14 +1,8 @@
 .PHONY: requirements frontend
 
-# Set the following variable to you project name
 PROJECT_NAME = shop
-DEFAULT_VIRTUALENV = .env
-# Possible virtualenv if virtualenvwrapper is used
-POSSIBLE_VIRTUALENV = $(VIRTUAL_ENV)
-# Use possible virtualenv if it exists and virtualenvwrapper is used, otherwise use default one
-VIRTUALENV = $(if $(wildcard $(POSSIBLE_VIRTUALENV)),$(POSSIBLE_VIRTUALENV),$(DEFAULT_VIRTUALENV))
+VIRTUALENV = .env
 
-PYVERSION=3.6
 PIP = $(VIRTUALENV)/bin/pip
 PYTHON = $(VIRTUALENV)/bin/python
 PYTEST = $(VIRTUALENV)/bin/pytest
@@ -25,11 +19,7 @@ WHITE=\033[37m
 YELLOW=\033[33m
 PREFIX=$(GREEN)$(BS)=>$(BE)$(WHITE)
 
-default: env requirements frontend migrate loaddata
-
-env:
-	@echo "$(PREFIX) Creating virtual environment within \"$(YELLOW)$(BS)$(VIRTUALENV)$(BE)$(WHITE)\" directory"
-	@python$(PYVERSION) -m venv $(VIRTUALENV) || rm -rf $(VIRTUALENV) && virtualenv -p `which python$(PYVERSION)` $(VIRTUALENV)
+default: requirements frontend migrate loaddata
 
 requirements:
 	@echo "$(PREFIX) Installing local $(PROJECT_NAME) requirements"

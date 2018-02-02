@@ -19,6 +19,7 @@ docker run pygo/shop test
 #### Requirements:
 
 * Python 3.6.x
+* Virtualenv 15.x
 * NodeJS 9.x
 * Yarn
 
@@ -32,6 +33,7 @@ git clone https://github.com/dmrz/shop.git
 
 ```bash
 cd shop
+virtualenv -p python3.6 .env
 make
 ```
 
