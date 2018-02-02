@@ -1,0 +1,46 @@
+{% load static %}
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% block title %}Shop Frontend{% endblock %}</title>
+  <link rel="stylesheet" href="{% static "core/css/bootstrap.min.css" %}">
+  {% render_bundle "app" "css" %}
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+      <a class="navbar-brand" href="{% url "frontend" %}">Shop</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="{% url "api-root" %}">API Browser</a>
+          <a class="nav-item nav-link" href="{% url "api-docs:docs-index" %}">API Docs</a>
+          <a class="nav-item nav-link" href="{% url "admin:index" %}">Admin Site</a>
+        </div>
+        <div class="navbar-nav">
+          {% if user.is_authenticated %}
+          <span class="navbar-text">Hello, {{ user.username }}!</span>
+          {% else %}
+          <a class="nav-item nav-link" href="{% url "login" %}">Login</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <main class="content m-3" role="main">
+      {% block content %}
+      {% endblock content %}
+    </main>
+  </div>
+  {% render_bundle "manifest" "js" %}
+  {% render_bundle "vendor" "js" %}
+  {% render_bundle "app" "js" %}
+</body>
+</html>

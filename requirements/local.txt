@@ -1,0 +1,10 @@
+-r base.txt
+
+flake8==3.5.0
+mypy==0.560
+pylint==1.8.2
+pytest==3.3.2
+pytest-faker==2.0.0
+pytest-sugar==0.9.0
+
+-e git+https://github.com/pytest-dev/pytest-django.git@927d6c17f1791e6f18a90b306bfa83eb8509b4a8#egg=pytest_django

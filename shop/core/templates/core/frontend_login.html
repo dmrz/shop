@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+{% block title %}Login &#124; {{ block.super }}{% endblock title %}
+
+{% block content %}
+<div class="row">
+  <div class="col-4 mx-auto">
+    <form action="{% url "login" %}" method="post">{% csrf_token %}
+        <div class="alert alert-success" role="alert">Use username: <strong>admin</strong> and password: <strong>admin</strong></div>
+        {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+          {% endfor %}
+        {% endif %}
+
+        {# Hidden input for redirect #}
+        <input id="next" name="next" type="hidden" value="{{ next }}">
+
+        {% for field in form.visible_fields %}
+        <div class="form-group has-feedback{% if field.errors %} has-error{% endif %}">
+            <input {% if field.name == "username" %}autofocus{% endif %} type="{{ field.field.widget.input_type }}" class="form-control {% if field.errors %}is-invalid{% endif %}" id="{{ field.id_for_label }}" name="{{ field.name }}" placeholder="{{ field.label }}">
+            {% if field.errors %}
+              {% for error in field.errors %}
+              <div class="invalid-feedback">{{ error }}</div>
+              {% endfor %}
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <div class="row">
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+          </div>
+        </div>
+
+    </form>
+  </div>
+</div>
+{% endblock content %}

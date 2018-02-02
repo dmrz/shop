@@ -1,0 +1,74 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "Apple Watch Series 3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu nec lorem rutrum feugiat a vel lectus. Mauris diam velit, viverra sit amet varius nec, luctus sed ligula. Cras vel laoreet lectus, at dignissim purus. Aliquam dictum magna facilisis nunc sollicitudin pellentesque vel in risus.",
+        "photo": "products/watch-modelheader-series3-hero-201709_GEO_AU.png",
+        "price": "329.00",
+        "created": "2018-02-01T15:07:08.880Z",
+        "updated": "2018-02-01T20:49:52.491Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "name": "Apple TV 4K 64GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu nec lorem rutrum feugiat a vel lectus. Mauris diam velit, viverra sit amet varius nec, luctus sed ligula. Cras vel laoreet lectus, at dignissim purus. Aliquam dictum magna facilisis nunc sollicitudin pellentesque vel in risus.",
+        "photo": "products/apple-tv-hero-select-201510.jpeg",
+        "price": "200.00",
+        "created": "2018-02-01T15:08:25.949Z",
+        "updated": "2018-02-01T20:54:53.346Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "name": "Macbook Pro 13\" 2017",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu nec lorem rutrum feugiat a vel lectus. Mauris diam velit, viverra sit amet varius nec, luctus sed ligula. Cras vel laoreet lectus, at dignissim purus. Aliquam dictum magna facilisis nunc sollicitudin pellentesque vel in risus.",
+        "photo": "products/mbp13touch-gray-select-201610.jpeg",
+        "price": "2500.00",
+        "created": "2018-02-01T15:09:04.359Z",
+        "updated": "2018-02-01T20:46:57.996Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "name": "iPhone 8 Plus 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu nec lorem rutrum feugiat a vel lectus. Mauris diam velit, viverra sit amet varius nec, luctus sed ligula. Cras vel laoreet lectus, at dignissim purus. Aliquam dictum magna facilisis nunc sollicitudin pellentesque vel in risus.",
+        "photo": "products/633449.jpeg",
+        "price": "949.00",
+        "created": "2018-02-01T15:15:07.258Z",
+        "updated": "2018-02-01T20:54:14.204Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "name": "iPhone X 256GB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu nec lorem rutrum feugiat a vel lectus. Mauris diam velit, viverra sit amet varius nec, luctus sed ligula. Cras vel laoreet lectus, at dignissim purus. Aliquam dictum magna facilisis nunc sollicitudin pellentesque vel in risus.",
+        "photo": "products/Iphone-x-2.jpg",
+        "price": "1149.00",
+        "created": "2018-02-01T15:30:22.004Z",
+        "updated": "2018-02-01T20:53:44.530Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "name": "iMac Pro",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed arcu nec lorem rutrum feugiat a vel lectus. Mauris diam velit, viverra sit amet varius nec, luctus sed ligula. Cras vel laoreet lectus, at dignissim purus. Aliquam dictum magna facilisis nunc sollicitudin pellentesque vel in risus.",
+        "photo": "products/77714ab3-453e-434a-a8c9-61e53a0bc4be.jpg",
+        "price": "4999.00",
+        "created": "2018-02-01T20:08:04.574Z",
+        "updated": "2018-02-01T20:51:28.032Z"
+    }
+}
+]

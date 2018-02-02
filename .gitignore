@@ -1,0 +1,10 @@
+.ropeproject
+.mypy_cache
+.cache
+*.sublime-*
+__pycache__
+*.egg-info
+dist
+build
+db.sqlite3
+.nvmrc
